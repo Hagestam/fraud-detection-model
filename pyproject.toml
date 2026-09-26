@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-anomaly-detector"
+version = "0.1.0"
+description = "Leakage-aware hybrid fraud detection with XGBoost, Isolation Forest, SHAP, MLflow, FastAPI, and Redis."
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.30,<1",
+  "pydantic>=2.8,<3",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "scipy>=1.13,<2",
+  "scikit-learn>=1.5,<2",
+  "xgboost>=2.1,<4",
+  "shap>=0.46,<1",
+  "mlflow>=2.17,<4",
+  "redis>=5,<7",
+  "joblib>=1.4,<2",
+  "pyarrow>=17,<25",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.8,<1"]
+
+[project.scripts]
+fraud-train = "fraud_detection.train:main"
+fraud-benchmark = "fraud_detection.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

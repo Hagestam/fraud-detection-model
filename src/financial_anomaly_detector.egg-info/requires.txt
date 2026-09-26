@@ -1,0 +1,16 @@
+fastapi<1,>=0.115
+uvicorn[standard]<1,>=0.30
+pydantic<3,>=2.8
+numpy<3,>=1.26
+pandas<3,>=2.2
+scipy<2,>=1.13
+scikit-learn<2,>=1.5
+xgboost<4,>=2.1
+shap<1,>=0.46
+mlflow<4,>=2.17
+redis<7,>=5
+joblib<2,>=1.4
+pyarrow<25,>=17
+
+[dev]
+ruff<1,>=0.8

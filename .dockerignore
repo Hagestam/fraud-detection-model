@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+.ruff_cache
+mlruns
+data
+artifacts
+.env
+*.py[cod]

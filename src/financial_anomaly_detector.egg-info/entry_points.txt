@@ -1,0 +1,3 @@
+[console_scripts]
+fraud-benchmark = fraud_detection.benchmark:main
+fraud-train = fraud_detection.train:main

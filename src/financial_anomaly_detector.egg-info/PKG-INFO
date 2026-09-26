@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: financial-anomaly-detector
+Version: 0.1.0
+Summary: Leakage-aware hybrid fraud detection with XGBoost, Isolation Forest, SHAP, MLflow, FastAPI, and Redis.
+Requires-Python: <3.13,>=3.11
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: uvicorn[standard]<1,>=0.30
+Requires-Dist: pydantic<3,>=2.8
+Requires-Dist: numpy<3,>=1.26
+Requires-Dist: pandas<3,>=2.2
+Requires-Dist: scipy<2,>=1.13
+Requires-Dist: scikit-learn<2,>=1.5
+Requires-Dist: xgboost<4,>=2.1
+Requires-Dist: shap<1,>=0.46
+Requires-Dist: mlflow<4,>=2.17
+Requires-Dist: redis<7,>=5
+Requires-Dist: joblib<2,>=1.4
+Requires-Dist: pyarrow<25,>=17
+Provides-Extra: dev
+Requires-Dist: ruff<1,>=0.8; extra == "dev"
